@@ -76,7 +76,7 @@ Yes, you'll end up with extra commits on your branch. But unless you are up for 
 On the other hand, if your branch is only a local branch (i.e. not yet pushed to any remote) you should 
 definitely do a rebase (and your branch will not diverge in this case).
 Now if you are reading this because you already are in a "diverged" scenario due to such rebase, you can get back to the last commit from origin (i.e. in an un-diverged state) by using:
-git reset --hard origin/my_remote_tracking_branch
+git config --global http.proxy http[s]://userName:password@proxyaddress:port git reset --hard origin/my_remote_tracking_branch
 
 20
 
@@ -120,4 +120,4 @@ git config --global user.name "Your Name Here"
 git config --global user.email "your_email@youremail.com"
 git init
 git remote add origin https://github.com/gittest1040/Hello-World.git
-
+git config --global http.proxy http[s]://userName:password@proxyaddress:port 
