@@ -80,6 +80,7 @@ git config --global http.proxy http[s]://userName:password@proxyaddress:port git
 
 20
 
+mvn clean install -DproxySet=true -DproxyHost=myproxy.com -DproxyPort=YourPort 
 In my case here is what I did to cause the diverged message: I did git push but then did git commit --amend to add something to the commit message. Then I also did another commit.
 So in my case that simply meant origin/master was out of date. Because I knew no-one else was touching origin/master, the fix was trivial: git push -f (where -f means force)
 
@@ -121,3 +122,4 @@ git config --global user.email "your_email@youremail.com"
 git init
 git remote add origin https://github.com/gittest1040/Hello-World.git
 git config --global http.proxy http[s]://userName:password@proxyaddress:port 
+mvn clean install -DproxySet=true -DproxyHost=myproxy.com -DproxyPort=YourPort 
