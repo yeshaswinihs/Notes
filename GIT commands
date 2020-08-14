@@ -1,0 +1,92 @@
+
+Reference : https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_6
+
+
+Git is a distributed version control system (DVCS). "Distributed" means that all developers within a team have a complete version of the project. A version control system is simply software that lets you effectively manage application versions. Thanks to Git, you'll be able to do the following:
+
+Keep track of all files in a project
+Record any changes to project files
+Restore previous versions of files
+Compare and analyze code
+Merge code from different computers and different team members.
+
+Configuring GIT
+$ git config --global user.name "King Kong"
+$ git config --global user.email "king-kong@gmail.com"
+
+To view Git configurations
+$ git config --list
+user.name=King Kong
+user.email=king-kong@gmail.com
+
+$ git config --global color.ui true
+
+Starting a New Local Repository with Git
+$ git init
+Initialized empty Git repository in /home/dell/new-folder/.git/
+
+$ git status
+On branch master
+Initial commit
+nothing to commit (create/copy files and use "git add" to track)
+
+$ git status
+On branch master
+Initial commit
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+	my_new_file.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+Staging Files with Git
+$ git add my-file.ts another-file.js new_file.rb
+$ git add .
+$ git add --all
+ git rm --cached my-file.ts                  --removing-a-file-from-staging-area.
+ $ git reset another-file.js
+ 
+ Committing Changes to Git
+ $ git commit -m "Add three files"
+ $ git commit -a -m "Do something once more"       adding-and-committing-files-to-repository
+ $ git reset --soft HEAD^              undo-last-commit.
+
+git add file-i-forgot-to-add.html
+$ git commit --amend -m "Add the remaining file"amending-last-commit.
+
+
+Push and Pull To and From a Remote Repository
+In real development, your workflow will look like this:
+
+You work on a feature and commit files to a branch (master or any other branch).
+You push commits to a remote repository.
+Other developers pull your commits to their computers to have the latest version of the project.
+git remote add origin https://github.com/YourUsername/some-small-app.git         adding-remote-repository
+$ git push -u origin master           pushing-to-remote-master-branch
+
+HTTPS is the default protocol used for connecting with GitHub, and you need to manually set up SSH.
+$ git remote -v    listing-remote-repositories-in-console
+origin	https://github.com/YourName/some-app.git (fetch)
+origin	https://github.com/YourName/some-app.git (push)
+
+$ git clone git@github.com:YourUsername/your-app.git        cloning-remote-repository.
+$ git clone git@github.com:YourUsername/your-app.git this-name-is-much-better     cloning-remote-repository-and-changing-its-name
+$ git pull           pulling-from-remote-repository.
+When you run the "pull" command, Git will:
+
+Pull changes in the current branch made by other developers; and
+Synchronize your local repository with the remote repository.
+
+List of Git Commands for Working with Branches
+$ git branch   listing-git-branches
+$ git branch user-profile    creating-new-branch
+$ git checkout user-profile     switching-between-branches
+$ git branch -d user-profile     deleting-branch
+$ git checkout -b admin-panel      creating-and-switching-to-new-branch-in-one-command.
+
+  
+
+
+ 
+ 
+
+
