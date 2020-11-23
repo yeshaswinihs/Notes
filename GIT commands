@@ -84,7 +84,8 @@ $ git branch -d user-profile     deleting-branch
 $ git checkout -b admin-panel      creating-and-switching-to-new-branch-in-one-command.
 
   
-
+git remote set-url <remote-name> <remote-url>-- to change the remote
+git remote -v   ---- to check remote
 
  
  
