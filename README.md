@@ -92,6 +92,7 @@ After fixing my mess locally (the details are not important here) I wanted to "m
 git push origin master -f
 
 To view the differences:
+
 git difftool --dir-diff master origin/master
 This will display the changes or differences between the two branches. In araxis (My favorite) it displays it in a folder diff style. Showing each of the changed files. I can then click on a file to see the details of the changes in the file.
 
